@@ -11,3 +11,5 @@ tmux kill-server
 ln -s ${CURDIR}/.vimrc ~/.vimrc
 cp -r ${CURDIR}/vim_colors/ ~/.vim/colors/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+mkdir -p ~/tools
+cp ${CURDIR}/clang-format.py ~/tools
