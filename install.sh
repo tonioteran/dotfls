@@ -7,6 +7,7 @@ CURDIR="${HOME}/repos/dotfls"
 ln -s ${CURDIR}/.tmux.conf ~/.tmux.conf
 tmux kill-server
 
-# vim.
+# vim - don't forget to run :BundleInstall afterwards inside vim.
 ln -s ${CURDIR}/.vimrc ~/.vimrc
 cp -r ${CURDIR}/vim_colors/ ~/.vim/colors/
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim

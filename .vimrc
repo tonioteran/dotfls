@@ -1,6 +1,19 @@
 "Vim please; not vi...
 set nocompatible
 
+" -- Vundle configurations.
+filetype off
+" Set the runtime path to include Vundle and initialize.
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" Let Vundle manage Vundle, required.
+Plugin 'VundleVim/Vundle.vim'
+" Go crazy with the plugins here:
+Plugin 'preservim/nerdcommenter'
+Plugin 'jiangmiao/auto-pairs'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
 "Use ',' as the "leader" key; not '\'
 let mapleader = ","
 
