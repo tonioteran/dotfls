@@ -3,6 +3,9 @@
 # Make sure to configure this yourself.
 CURDIR="${HOME}/repos/dotfls"
 
+# Bash aliases for convenience.
+cp ${CURDIR}/.bash_aliases ~/
+
 # tmux.
 ln -s ${CURDIR}/.tmux.conf ~/.tmux.conf
 tmux kill-server
