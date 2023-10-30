@@ -15,5 +15,21 @@ mkdir -p ~/tools
 cp ${CURDIR}/clang-format.py ~/tools
 sudo apt install clang-format
 
-# spacemacs - just cloning the repo
+# spacemacs - cloning the repo, installing Emacs, setting the dotfile, and font.
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+sudo add-apt-repository universe
+sudo apt update
+sudo apt install emacs
+ln -s ${CURDIR}/.spacemacs ~/.spacemacs
+# Source Code Pro font install.
+cd ~/Downloads
+wget https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip
+if [ ! -d "~/.fonts" ] ; then
+	mkdir ~/.fonts
+fi
+# Unzip and copy.
+unzip 1.050R-it.zip
+cp source-code-pro-*-it/OTF/*.otf ~/.fonts/
+rm -rf source-code-pro*
+rm 1.050R-it.zip
+fc-cache -f -V
