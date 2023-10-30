@@ -14,3 +14,6 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 mkdir -p ~/tools
 cp ${CURDIR}/clang-format.py ~/tools
 sudo apt install clang-format
+
+# spacemacs - just cloning the repo
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
