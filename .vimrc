@@ -513,16 +513,6 @@ if filereadable(google_vimrc)
   nnoremap <leader>gt :YcmCompleter GetType<CR>
   nnoremap <leader>gi :YcmCompleter GoToInclude<CR>
 
-  " In vim versions >= 8 we can leave the "gutter" column on. In earlier
-  " versions of vim YCM caused the "gutter" to flicker distractingly whenever
-  " a compiler error was introduced.
-  if v:version >= 8
-    set signcolumn=yes
-  elseif
-    " Turn of YCM diagnostics in the gutter in older versions of Vim.
-    let g:ycm_enable_diagnostic_signs=0
-  endif
-
   Glug blaze plugin[mappings]='<leader>b'
 
   " ,sf = [s]how [f]iles
