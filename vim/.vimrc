@@ -30,10 +30,10 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Clang format mappings
 " Use ctrl-K or ,fc to [F]ormat [C]ode
-map <C-K> :py3f ~/tools/clang-format.py<CR>
-imap <C-K> <ESC>:py3f ~/tools/clang-format.py<CR>
+map <C-K> :py3f ~/.vim/tools/clang-format.py<CR>
+imap <C-K> <ESC>:py3f ~/.vim/tools/clang-format.py<CR>
 " ,FC = [F]ormat [C]code.
-nmap <silent> <leader>fc :pyf ~/tools/clang-format.py<CR>
+nmap <silent> <leader>fc :pyf ~/.vim/tools/clang-format.py<CR>
 
 " Turn off swap files
 set noswapfile
