@@ -1,4 +1,8 @@
 format = """
-$git_branch\
 $directory\
+$git_branch\
+$git_status\
+$fill\
+$cmd_duration\
+$line_break\
 $character"""
