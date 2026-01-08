@@ -1,0 +1,4 @@
+format = """
+$git_branch\
+$directory\
+$character"""
