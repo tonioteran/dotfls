@@ -1,5 +1,5 @@
 ;; -*- mode: emacs-lisp; lexical-binding: t -*-
-;; This file is loaded by Spacema
+;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
 (defun dotspacemacs/layers ()
@@ -167,7 +167,7 @@ It should only modify the values of Spacemacs settings."
    ;; package can be defined with `:package', or a theme can be defined with
    ;; `:location' to download the theme package, refer the themes section in
    ;; DOCUMENTATION.org for the full theme specifications.
-   dotspacemacs-themes '(spacemacs-dark
+   dotspacemacs-themes '(modus-vivendi
                          spacemacs-light)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
@@ -383,7 +383,7 @@ It should only modify the values of Spacemacs settings."
    ;;   :size-limit-kb 1000)
    ;; When used in a plist, `visual' takes precedence over `relative'.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers 'relative
 
    ;; Code folding method. Possible values are `evil', `origami' and `vimish'.
    ;; (default 'evil)
@@ -532,6 +532,9 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
+  ;; I like having the column line always.
+  (global-display-fill-column-indicator-mode)
+
   ;; Set the spell checker program to aspell
   (setq ispell-program-name "aspell")
 
@@ -573,29 +576,29 @@ This function is called at the very end of Spacemacs initialization."
          centered-cursor-mode clean-aindent-mode closql code-review
          column-enforce-mode company company-c-headers cpp-auto-include deferred
          define-word devdocs diff-hl diminish dired-quick-sort disable-mouse
-         disaster dotenv-mode drag-stuff dumb-jump edit-indirect elisp-def
-         elisp-demos elisp-slime-nav emacsql emojify emr eval-sexp-fu evil-anzu
-         evil-args evil-cleverparens evil-collection evil-easymotion evil-escape
-         evil-evilified-state evil-exchange evil-goggles evil-iedit-state
-         evil-indent-plus evil-lion evil-lisp-state evil-matchit evil-mc
-         evil-nerd-commenter evil-numbers evil-org evil-surround evil-textobj-line
-         evil-tutor evil-unimpaired evil-visual-mark-mode evil-visualstar
-         expand-region eyebrowse fancy-battery flycheck flycheck-elsa
-         flycheck-package flycheck-pos-tip flyspell-correct flyspell-correct-helm
-         forge gendoxy gh-md ghub git-link git-messenger git-modes git-timemachine
-         gitignore-templates gntp gnuplot golden-ratio google-c-style
-         google-translate helm-ag helm-c-yasnippet helm-comint helm-company
-         helm-descbinds helm-ls-git helm-make helm-mode-manager helm-org
-         helm-org-rifle helm-projectile helm-purpose helm-swoop helm-xref
+         disaster doom-themes dotenv-mode drag-stuff dumb-jump edit-indirect
+         elisp-def elisp-demos elisp-slime-nav emacsql emojify emr eval-sexp-fu
+         evil-anzu evil-args evil-cleverparens evil-collection evil-easymotion
+         evil-escape evil-evilified-state evil-exchange evil-goggles
+         evil-iedit-state evil-indent-plus evil-lion evil-lisp-state evil-matchit
+         evil-mc evil-nerd-commenter evil-numbers evil-org evil-surround
+         evil-textobj-line evil-tutor evil-unimpaired evil-visual-mark-mode
+         evil-visualstar expand-region eyebrowse fancy-battery flycheck
+         flycheck-elsa flycheck-package flycheck-pos-tip flyspell-correct
+         flyspell-correct-helm forge gendoxy gh-md ghub git-link git-messenger
+         git-modes git-timemachine gitignore-templates gntp gnuplot golden-ratio
+         google-c-style google-translate helm-ag helm-c-yasnippet helm-comint
+         helm-company helm-descbinds helm-ls-git helm-make helm-mode-manager
+         helm-org helm-org-rifle helm-projectile helm-purpose helm-swoop helm-xref
          hide-comnt highlight-indentation highlight-numbers highlight-parentheses
          hl-todo holy-mode htmlize hungry-delete hybrid-mode indent-guide info+
          inspector link-hint llama log4e lorem-ipsum macrostep magit magit-section
-         markdown-mode markdown-toc multi-line nameless open-junk-file
-         org-category-capture org-cliplink org-contrib org-download org-mime
-         org-pomodoro org-present org-project-capture org-projectile org-rich-yank
-         org-superstar orgit orgit-forge overseer package-lint page-break-lines
-         paradox password-generator pcre2el popwin pos-tip quickrun
-         rainbow-delimiters restart-emacs smeargle space-doc spaceline
+         markdown-mode markdown-toc monokai-theme multi-line nameless
+         open-junk-file org-category-capture org-cliplink org-contrib org-download
+         org-mime org-pomodoro org-present org-project-capture org-projectile
+         org-rich-yank org-superstar orgit orgit-forge overseer package-lint
+         page-break-lines paradox password-generator pcre2el popwin pos-tip
+         quickrun rainbow-delimiters restart-emacs smeargle space-doc spaceline
          spacemacs-purpose-popwin spacemacs-whitespace-cleanup
          string-edit-at-point string-inflection symbol-overlay symon term-cursor
          toc-org transient treemacs-evil treemacs-icons-dired treemacs-magit
