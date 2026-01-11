@@ -531,11 +531,12 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  (spacemacs/toggle-truncate-lines-on)
 
   ;; I like having the column line always.
   (global-display-fill-column-indicator-mode)
 
-  ;; Set the spell checker program to aspell
+  ;; Set the spell checker program to aspell.
   (setq ispell-program-name "aspell")
 
   ;; === evil ===
