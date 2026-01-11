@@ -556,7 +556,22 @@ before packages are loaded."
   (with-eval-after-load 'evil-maps
     (define-key evil-motion-state-map (kbd ";") 'evil-ex))
 
-  )
+  ;; --- org mode ---
+  (with-eval-after-load 'org
+
+    ;; Dedicated agenda files.
+    (setq org-agenda-files '("~/repos/org"))
+
+    ;; Custom tags.
+    (setq org-tag-alist '(;; places/contexts - where ?
+                          (:startgroup)
+                          ("@chore" . ?c)
+                          ("@math"  . ?m)
+                          (:endgroup)
+                          ))
+    );; org
+
+  );; user-config
 
 
 ;; Do not write anything past this comment. This is where Emacs will
