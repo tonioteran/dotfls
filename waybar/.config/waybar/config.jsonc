@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 28,
+  "height": 20,
 
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
@@ -62,7 +62,7 @@
   },
 
   "memory": {
-    "format": "  {used}MB"
+    "format": "  {used}GB"
   },
 
   "tray": {

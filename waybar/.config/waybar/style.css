@@ -18,14 +18,14 @@ window#waybar {
     color: #1e1e2e;
 }
 
-#clock {
-    background-color: #458588; /* A teal color */
-    color: #e0def4; /* White text */
-    padding: 0 10px; /* Add horizontal padding */
-    border-radius: 0px 10px 10px 0px; /* Rounded corners on the right side only */
-    margin-right: 5px; /* Spacing from next module */
-}
+/* #clock { */
+/*     background-color: #458588; /\* A teal color *\/ */
+/*     color: #e0def4; /\* White text *\/ */
+/*     padding: 0 10px; /\* Add horizontal padding *\/ */
+/*     border-radius: 0px 10px 10px 0px; /\* Rounded corners on the right side only *\/ */
+/*     margin-right: 5px; /\* Spacing from next module *\/ */
+/* } */
 
-#battery, #network, #cpu, #memory {
+#clock, #battery, #network, #cpu, #memory {
     padding: 0 10px;
 }
