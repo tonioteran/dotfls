@@ -27,6 +27,9 @@ This function should only modify configuration layer settings."
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode
             c-c++-enable-clang-support t)
+     (json  :variables
+            json-fmt-tool 'web-beautify
+            json-fmt-on-save t)
      emacs-lisp
      git
      helm
@@ -571,6 +574,9 @@ before packages are loaded."
                           ))
     );; org
 
+  ;; --- json ---
+  (add-to-list 'auto-mode-alist '("\\.jsonc\\'" . json-mode))
+
   );; user-config
 
 
@@ -581,54 +587,54 @@ before packages are loaded."
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(a ace-link add-node-modules-path aggressive-indent alert all-the-icons
-       auto-compile auto-highlight-symbol auto-yasnippet avy-jump-helm-line
-       browse-at-remote centered-cursor-mode clean-aindent-mode closql
-       code-review column-enforce-mode company company-c-headers company-web
-       counsel counsel-css cpp-auto-include deferred define-word devdocs diff-hl
-       diminish dired-quick-sort disable-mouse disaster doom-themes dotenv-mode
-       drag-stuff dumb-jump edit-indirect elisp-def elisp-demos elisp-slime-nav
-       emacsql emmet-mode emojify emr eval-sexp-fu evil-anzu evil-args
-       evil-cleverparens evil-collection evil-easymotion evil-escape
-       evil-evilified-state evil-exchange evil-goggles evil-iedit-state
-       evil-indent-plus evil-lion evil-lisp-state evil-matchit evil-mc
-       evil-nerd-commenter evil-numbers evil-org evil-surround evil-textobj-line
-       evil-tutor evil-unimpaired evil-visual-mark-mode evil-visualstar
-       expand-region eyebrowse fancy-battery flycheck flycheck-elsa
-       flycheck-package flycheck-pos-tip flyspell-correct flyspell-correct-helm
-       forge gendoxy gh-md ghub git-link git-messenger git-modes git-timemachine
-       gitignore-templates gntp gnuplot golden-ratio google-c-style
-       google-translate haml-mode helm-ag helm-c-yasnippet helm-comint
-       helm-company helm-css-scss helm-descbinds helm-ls-git helm-make
-       helm-mode-manager helm-org helm-org-rifle helm-projectile helm-purpose
-       helm-swoop helm-xref hide-comnt highlight-indentation highlight-numbers
-       highlight-parentheses hl-todo holy-mode htmlize hungry-delete hybrid-mode
-       impatient-mode indent-guide info+ inspector ivy link-hint llama log4e
-       lorem-ipsum macrostep magit magit-section markdown-mode markdown-toc
-       monokai-theme multi-line nameless open-junk-file org-category-capture
-       org-cliplink org-contrib org-download org-mime org-pomodoro org-present
-       org-project-capture org-projectile org-rich-yank org-superstar orgit
-       orgit-forge overseer package-lint page-break-lines paradox
-       password-generator pcre2el popwin pos-tip prettier-js pug-mode quickrun
-       rainbow-delimiters restart-emacs sass-mode scss-mode simple-httpd
-       slim-mode smeargle space-doc spaceline spacemacs-purpose-popwin
-       spacemacs-whitespace-cleanup string-edit-at-point string-inflection
-       swiper symbol-overlay symon tagedit term-cursor toc-org transient
-       treemacs-evil treemacs-icons-dired treemacs-magit treemacs-persp
-       treemacs-projectile treepy undo-fu-session uuidgen vi-tilde-fringe
-       volatile-highlights vundo web-beautify web-completion-data web-mode wgrep
-       winum with-editor writeroom-mode ws-butler yaml yasnippet
-       yasnippet-snippets)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-)
+  (custom-set-variables
+   ;; custom-set-variables was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   '(package-selected-packages
+     '(a ace-link add-node-modules-path aggressive-indent alert all-the-icons
+         auto-compile auto-highlight-symbol auto-yasnippet avy-jump-helm-line
+         browse-at-remote centered-cursor-mode clean-aindent-mode closql
+         code-review column-enforce-mode company company-c-headers company-web
+         counsel counsel-css cpp-auto-include deferred define-word devdocs diff-hl
+         diminish dired-quick-sort disable-mouse disaster doom-themes dotenv-mode
+         drag-stuff dumb-jump edit-indirect elisp-def elisp-demos elisp-slime-nav
+         emacsql emmet-mode emojify emr eval-sexp-fu evil-anzu evil-args
+         evil-cleverparens evil-collection evil-easymotion evil-escape
+         evil-evilified-state evil-exchange evil-goggles evil-iedit-state
+         evil-indent-plus evil-lion evil-lisp-state evil-matchit evil-mc
+         evil-nerd-commenter evil-numbers evil-org evil-surround evil-textobj-line
+         evil-tutor evil-unimpaired evil-visual-mark-mode evil-visualstar
+         expand-region eyebrowse fancy-battery flycheck flycheck-elsa
+         flycheck-package flycheck-pos-tip flyspell-correct flyspell-correct-helm
+         forge gendoxy gh-md ghub git-link git-messenger git-modes git-timemachine
+         gitignore-templates gntp gnuplot golden-ratio google-c-style
+         google-translate haml-mode helm-ag helm-c-yasnippet helm-comint
+         helm-company helm-css-scss helm-descbinds helm-ls-git helm-make
+         helm-mode-manager helm-org helm-org-rifle helm-projectile helm-purpose
+         helm-swoop helm-xref hide-comnt highlight-indentation highlight-numbers
+         highlight-parentheses hl-todo holy-mode htmlize hungry-delete hybrid-mode
+         impatient-mode indent-guide info+ inspector ivy json-mode json-navigator
+         json-reformat json-snatcher link-hint llama log4e lorem-ipsum macrostep
+         magit magit-section markdown-mode markdown-toc monokai-theme multi-line
+         nameless open-junk-file org-category-capture org-cliplink org-contrib
+         org-download org-mime org-pomodoro org-present org-project-capture
+         org-projectile org-rich-yank org-superstar orgit orgit-forge overseer
+         package-lint page-break-lines paradox password-generator pcre2el popwin
+         pos-tip prettier-js pug-mode quickrun rainbow-delimiters restart-emacs
+         sass-mode scss-mode simple-httpd slim-mode smeargle space-doc spaceline
+         spacemacs-purpose-popwin spacemacs-whitespace-cleanup
+         string-edit-at-point string-inflection swiper symbol-overlay symon
+         tagedit term-cursor toc-org transient treemacs-evil treemacs-icons-dired
+         treemacs-magit treemacs-persp treemacs-projectile treepy undo-fu-session
+         uuidgen vi-tilde-fringe volatile-highlights vundo web-beautify
+         web-completion-data web-mode wgrep winum with-editor writeroom-mode
+         ws-butler yaml yasnippet yasnippet-snippets)))
+  (custom-set-faces
+   ;; custom-set-faces was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   )
+  )
