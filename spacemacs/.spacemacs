@@ -22,7 +22,8 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(html
+   '(toml
+     html
      auto-completion
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode
@@ -626,11 +627,11 @@ This function is called at the very end of Spacemacs initialization."
          sass-mode scss-mode simple-httpd slim-mode smeargle space-doc spaceline
          spacemacs-purpose-popwin spacemacs-whitespace-cleanup
          string-edit-at-point string-inflection swiper symbol-overlay symon
-         tagedit term-cursor toc-org transient treemacs-evil treemacs-icons-dired
-         treemacs-magit treemacs-persp treemacs-projectile treepy undo-fu-session
-         uuidgen vi-tilde-fringe volatile-highlights vundo web-beautify
-         web-completion-data web-mode wgrep winum with-editor writeroom-mode
-         ws-butler yaml yasnippet yasnippet-snippets)))
+         tagedit term-cursor toc-org toml-mode transient treemacs-evil
+         treemacs-icons-dired treemacs-magit treemacs-persp treemacs-projectile
+         treepy undo-fu-session uuidgen vi-tilde-fringe volatile-highlights vundo
+         web-beautify web-completion-data web-mode wgrep winum with-editor
+         writeroom-mode ws-butler yaml yasnippet yasnippet-snippets)))
   (custom-set-faces
    ;; custom-set-faces was added by Custom.
    ;; If you edit it by hand, you could mess it up, so be careful.
