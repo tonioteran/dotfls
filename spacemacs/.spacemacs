@@ -36,7 +36,8 @@ This function should only modify configuration layer settings."
      helm
      markdown
      multiple-cursors
-     org
+     (org :variables
+          org-enable-hugo-support t)
      spell-checking
      syntax-checking
      version-control
@@ -622,12 +623,12 @@ This function is called at the very end of Spacemacs initialization."
          nameless open-junk-file org-category-capture org-cliplink org-contrib
          org-download org-mime org-pomodoro org-present org-project-capture
          org-projectile org-rich-yank org-superstar orgit orgit-forge overseer
-         package-lint page-break-lines paradox password-generator pcre2el popwin
-         pos-tip prettier-js pug-mode quickrun rainbow-delimiters restart-emacs
-         sass-mode scss-mode simple-httpd slim-mode smeargle space-doc spaceline
-         spacemacs-purpose-popwin spacemacs-whitespace-cleanup
+         ox-hugo package-lint page-break-lines paradox password-generator pcre2el
+         popwin pos-tip prettier-js pug-mode quickrun rainbow-delimiters
+         restart-emacs sass-mode scss-mode simple-httpd slim-mode smeargle
+         space-doc spaceline spacemacs-purpose-popwin spacemacs-whitespace-cleanup
          string-edit-at-point string-inflection swiper symbol-overlay symon
-         tagedit term-cursor toc-org toml-mode transient treemacs-evil
+         tagedit term-cursor toc-org tomelr toml-mode transient treemacs-evil
          treemacs-icons-dired treemacs-magit treemacs-persp treemacs-projectile
          treepy undo-fu-session uuidgen vi-tilde-fringe volatile-highlights vundo
          web-beautify web-completion-data web-mode wgrep winum with-editor
